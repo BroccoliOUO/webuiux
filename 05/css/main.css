@@ -16,88 +16,80 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-
-body{
-    font-size: 50PX;
 }
-
-
-  .main{
-    width: 980px;
+.main{
+    width: 100%;
+    max-width: 950;
+    padding: 15px;
     margin: 0 auto;
-    /*background-color: rgb(244, 255, 215);*/
-  }
-.main>header{
-    /*text-align: center;*/
-
+    /* background-color: brown; */
 }
-
+.main>header{
+    text-align: center;
+    /* padding-top: 40px;
+    padding-bottom: 20px; */
+}
+.main>header>img.logo{
+    width: 150px;
+    /* display: block;
+    margin: 0 auto; */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.main>nav{
+    border-top: 1px solid #898000;
+    border-bottom: 1px solid #898000;
+    margin-bottom: 20px;
+    /* background-color: red; */
+}
+.main>nav>ul>li{
+    /* background-color: red; */
+    display: inline-block;
+    width: 32%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
 .main>nav>ul>li>.nav_item{
     text-decoration: none;
     color: #000;
     display: block;
     position: relative;
+    width: 100%;
 }
-
-
 .main>nav>ul>li>.nav_item>.nav_child{
-/*background-color: aqua;*/
+    /* background-color: red; */
     display: none;
     position: absolute;
-    display: block;
 }
-
 .main>nav>ul>li>.nav_item>.nav_child a{
-    background-color: #8a8000;
-    color: white;
+    background-color: #898000;
     text-decoration: none;
+    color: #fff;
     line-height: 20px;
+    font-size: 19px;
     display: block;
-    font-size: 25px;
-    padding: 10px;
-
+    padding: 10px 20px;
+    text-align: left;
 }
-.main>nav>ul>li>.nav_item>.nav_child a :hover{
-    
+.main>nav>ul>li>.nav_item>.nav_child a:hover{
+    background-color: #000;
 }
-
-.main>header>img.logo{
-    width: 150px;
-    margin-top: 40px;
-    margin-bottom: 50px;
-    margin: 0 auto;
-    display: block;
-}
-
-.main>nav{
-    border-top: 1px solid #8a8000;
-    border-bottom: 1px solid #8a8000;
-    margin-bottom: 20px;
-   /* background-color: brown;*/
-}
-
-.main>nav>ul>li{
-    display: inline-block;
-   /* background-color: blanchedalmond;*/
-    width: 32%;
-    text-align: center;
-    height: 70px;
-    line-height: 70px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-    .en_text{
-        color: #8a8000;
-
-    }
 
 .main>nav>ul>li>.nav_item:hover{
-    background-color: rgb(230, 230, 230);
+    background-color: #DCDDDD;
+}
+
+.main>nav>ul>li>.nav_item:hover .nav_child{
+    display: block;
 }
 
 .main>.content img{
-        width: 100%;
-    }
+    width: 100%;
+}
 
+.en_text{
+    color: #898000;
+}
