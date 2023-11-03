@@ -247,8 +247,66 @@ ul {
 
 footer{
     background-color: #898000;
-    margin-top: 20%;
+    margin-top: 5%;
     
+}
+
+/*flex解決方案 讓咚咚靠兩邊*/
+
+/*footer>.main{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+    
+    /*垂直置中*/
+    /*align-items: center;
+    /*padding-top: 30px;*/
+
+    /*footer>.main{
+        display: flex;
+        height: 120px;
+        padding-top: 20px;
+    }
+    
+    footer>.main>ul{
+        display: flex;
+    }
+}
+/*flex解決方案 2 讓咚咚靠兩邊*/
+
+/*footer>.main{
+    display: flex;
+    height: 120px;
+    padding-top: 20px;
+}
+
+footer>.main>ul{
+    display: flex;
+    margin-right: auto;
+}
+
+/*float 3 解決辦法*/
+footer>.main{
+    height: 120px;
+    display: flex;
+    
+}
+
+footer>.main>ul{
+float: left;
+margin-right: auto;
+gap: 15px;
+}
+footer>.main>div{
+float: right;
+
+}
+
+footer>.main>ul>a{
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 3px;
 }
 
 /*手機板*/
