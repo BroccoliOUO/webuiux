@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body{
+        background:url(	https://citycreator.com/bgs/2/bg_3.gif) ;
+        background-repeat: repeat-x;
+    }
+
+    .center_point{
+        width: 40px;
+        height: 40px;
+        background-color:rgb(109, 47, 255) ;
+        border-radius: 50%;
+        /*最外層圖釘relative*/
+        position:relative;
+        top: 200px;
+        left: 50%;
+    }
+    .object1{
+        background:url(	https://citycreator.com/blocks/2/build_9.gif) ;
+        width: 50px;
+        height: 70px;
+        background-repeat: no-repeat;
+        
+        /*圖釘*/
+        position:absolute;
+        top: 50px;
+        left: 86px;
+    }
+    .object2{
+        background:url(	https://citycreator.com/blocks/2/build_6.gif) ;
+        width: 50px;
+        height: 70px;
+        background-repeat: no-repeat;
+        position:absolute;
+        top: 30px;
+        left: 50px;
+    }
+    .object3{
+        background:url(	https://citycreator.com/blocks/2/igloo_big.gif) ;
+        width: 50px;
+        height: 70px;
+        background-repeat: no-repeat;
+        position:absolute;
+        top: 10px;
+        left: 90px;
+    }
+    .object4{
+        background:url(	https://citycreator.com/blocks/1/build_13.gif) ;
+        width: 50px;
+        height: 70px;
+        background-repeat: no-repeat;
+        position:absolute;
+        top: 70px;
+        left: 20px;
+       /*z軸 z軸越高在越前面*/
+        z-index: 5;
+    }
+    .object5{
+        background:url(	https://citycreator.com/blocks/1/build_15.gif) ;
+        width: 50px;
+        height: 70px;
+        background-repeat: no-repeat;
+        position:absolute;
+        top: 70px;
+        left: 20px;
+        z-index: 4;
+    }
+
+    .box{
+            background-color: aquamarine;
+        }
+        .inner_box{
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+</style>
+
+</head>
+<body>
+    <div class="box">
+        文字
+        <div class="inner_box"></div>
+        文字文字文字 <br>
+        文字文字文字<br>
+        文字文字<br>
+    </div>
+    <div class="center_point">
+        <div class="object1"></div>
+        <div class="object2"></div>
+        <div class="object3"></div>
+        <div class="object4"></div>
+        <div class="object5"></div>
+    </div>
+
+</body>
+</html>

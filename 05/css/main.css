@@ -19,9 +19,9 @@ ul {
 }
 .main{
     width: 100%;
-    max-width: 950;
-    padding: 15px;
+    max-width: 950px;
     margin: 0 auto;
+    padding: 0 15px;
     /* background-color: brown; */
 }
 .main>header{
@@ -29,7 +29,7 @@ ul {
     /* padding-top: 40px;
     padding-bottom: 20px; */
 }
-.main>header>img.logo{
+.main>header img.logo{
     width: 150px;
     /* display: block;
     margin: 0 auto; */
@@ -42,38 +42,53 @@ ul {
     margin-bottom: 20px;
     /* background-color: red; */
 }
-
+.main>nav>ul{
+    /*自動定位*/
+    /*display: flex;*/
+}
 .main>nav>ul>li{
     /* background-color: red; */
-    display: inline-block;
-    width: 32%;
+
+    /* 
+    這是 display inline-block 的排版方式 
+    */
+     display: inline-block;
+    width: 33.333333%;
+    margin-right: -4px; 
+
+    /* 
+    這是 display flex 的排版方式 
+    */
+    /*flex:1;*/
+
     height: 70px;
     line-height: 70px;
     text-align: center;
     font-size: 28px;
     font-weight: bold;
-    
-    flex 1;
 }
-    
 .main>nav>ul>li>.nav_item{
     text-decoration: none;
     color: #000;
     display: block;
+    /*圖釘 定中心點(下面選單才不會跑掉)*/
     position: relative;
     width: 100%;
 }
 .main>nav>ul>li>.nav_item>.nav_child{
     /* background-color: red; */
+    /*讓選單滑到才打開*/
     display: none;
+    /*固定選單  元素定位*/
     position: absolute;
+    width: 100%;
 }
 .main>nav>ul>li>.nav_item>.nav_child a{
     background-color: #898000;
     text-decoration: none;
     color: #fff;
     line-height: 20px;
-    font-size: 19px;
+    font-size: 16px;
     display: block;
     padding: 10px 20px;
     text-align: left;
@@ -88,7 +103,6 @@ ul {
 
 .main>nav>ul>li>.nav_item:hover .nav_child{
     display: block;
-    width: 100%;
 }
 
 .main>.content img{
@@ -99,68 +113,127 @@ ul {
     color: #898000;
 }
 
-@media(max-width:992px){
-   .main>nav>ul{
-    flex-direction: columnS;
-   }
-    .main>nav>ul>li{
-        width: 100%;
-    }
 
-}
-
-/*shop的*/
-.main>.shop_content>.p_content{
-    color: #58595d;
-    line-height: 40px;
+/* shop.html 的 css */
+.shop_content>.p_content{
+    color: #58595B;
+    line-height: 20px;
     letter-spacing: 1.5px;
-    font-size: 22px;
+    font-size: 15px;
     font-weight: bold;
 }
-
 .shop_content>.item_wrap{
     border: 1px solid #898000;
-
+    font-weight: bold;
 }
-
 .shop_content>.item_wrap>.item_row{
+  
     display: flex;
     padding: 15px;
 }
-.shop_content>.item_wrap>.item_row>div{
+/*.shop_content>.item_wrap>.item_row>div{
+    /*讓選單平均分配
     flex: 1;
+}*/
+
+
+.shop_content>.item_wrap>.item_row>.item_left{
+    width: 20%;
 }
 
-.shop_content>.item_wrap>.item_row> item_title{
+.product_img{
+    width: 100%;
+    
+}
+
+.shop_content>.item_wrap>.item_row>.item_mid{
+    width: 40%;
+    padding: 0 15px;
+    display: flex;
+    /*把建議售價變垂直*/
+    flex-direction: column;
+    /*讓建議售價掉下去*/
+    justify-content: space-between;
+    
+
+    /*字和圖片間距撐開*/
+    /*margin 會讓整體變大*/
+    
+    /*position: relative;*/
+}
+
+
+.price{
+   /* position: absolute;
+    bottom:0;*/
+    color: #898000;
+}*/
+.item_mid>h2{
+    margin: 0;
+    font-size: 22px;
+    line-height: 25px;
+    /*把別人推開*/
+    margin-bottom:auto ;
+   
+}
+
+.shop_content>.item_wrap>.item_row>.item_right{
+    width: 40%;
+    
+}
+
+.shop_content>.item_wrap>.item_row>.item_right .item_title{
     border-bottom: 1px solid #898000;
-    font-weight: bold;
     padding-bottom: 3px;
 }
-.game_txt{
-    font-size: 20px;
-    line-height: 19px;
-    float border: 5px;
+.shop_content>.item_wrap>.item_row>.item_right .item_child{
+    display: flex;
+    margin-top: 10px;
 }
-
-
 .price_txt{
-    font-size: 20px;
     color: #898000;
+    font-size: 17px;
+    margin-bottom: 13px;
 }
-
+.game_txt{
+    line-height: 19px;
+    font-size: 15px;
+}
 .buy_btn{
     margin-left: 30px;
-    width: 82px;
-    height: 32px;
-    line-height: 30px;
-    font-size: 20px;
-    background-color: #898000;
 
+    text-decoration: none;
+    background: #827B00;
     color: #fff;
     padding: 7px;
     display: block;
     border-radius: 14px;
-    float: right;
+}
+/* .buy_btn{
+    margin-left: 30px;
+    width: 82px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #8A8000;
+    border-radius: 14px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+    display: block;
+    text-decoration: none;
+} */
 
-;
+
+.buy_btn:hover{
+    background: #000;
+}
+
+
+@media(max-width:992px){
+    .main>nav>ul{
+        flex-direction: column;
+    }
+    .main>nav>ul>li{
+        width: 100%;
+    }
 }
